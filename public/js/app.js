@@ -25,5 +25,3 @@ fetch('http://localhost:3000/weather?address='+location).then((response)=>{
     })
 })
 
-
-

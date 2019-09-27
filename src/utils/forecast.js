@@ -8,7 +8,7 @@ const forecast = (latitude,longitude,callback)=>{
             } else if (body.error){
                 callback('unable to find location try another search',undefined)}
             else {
-                callback(undefined,body.daily.data[0].summary +' Hava şu anda ' + body.currently.temperature  + ' derece.Yağmur yağma ihtimali % ' +  body.currently.precipIntensity)
+                callback(undefined,body.daily.data[0].summary + 'Beklenilen en yüksek sıcaklık ' + body.daily.data[0].temperatureHigh + ' ve ' + ' Beklenilen en düşük sıcaklık ' + body.daily.data[0].temperatureLow  + ' olacak ' +  'Hava şu anda ' + body.currently.temperature  + ' derece.Yağmur yağma ihtimali % ' +  body.currently.precipIntensity)
             }
         })
 }
